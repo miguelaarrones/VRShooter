@@ -24,4 +24,15 @@ public class PhysicsProjectile : Projectile
         base.Launch();
         rb.AddRelativeForce(Vector3.forward * weapon.GetShootingForce(), ForceMode.Impulse);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        ITakeDamage[] damageTakers = other.GetComponentsInChildren<ITakeDamage>();
+
+        foreach(var taker in damageTakers) 
+        {
+            taker.TakeDamage(weapon, this, transform.position);
+        }
+    }
 }
