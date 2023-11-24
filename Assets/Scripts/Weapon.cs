@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     private Rigidbody rb;
     private XRGrabInteractable interactableWeapon;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
         interactableWeapon = GetComponent<XRGrabInteractable>();
