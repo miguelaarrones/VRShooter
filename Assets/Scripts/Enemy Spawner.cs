@@ -37,6 +37,7 @@ public class EnemySpawner : MonoBehaviour
     {
         EnemyAI enemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
         int spawnPointIndex = spawnedEnemies.Count % spawnPoints.Length;
+        Debug.Log(spawnPointIndex);
         enemy.Init(player, spawnPoints[spawnPointIndex]);
 
         spawnedEnemies.Add(enemy);
