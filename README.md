@@ -1,5 +1,5 @@
 # VRShooter
-A VR Shooter example game.
+A VR Shooter testing game.
 
 ## This project is not finished, there's a lot of polishment to be done and is not working as a properly shooter. 
 
